@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+<script src="{% static 'js/tree.js' %}"></script>
+{% endblock %}
+
+<body>
+    {% block contents %}
+
+    <div><span>Project</span> WAVES</div>
+    <a href="{% url '2th' %}">
+        <h2>wow</h2>
+    </a>
+
+
+
+
+    <script src="{% static 'js/index.js' %}"></script>
+    {% endblock %}
+</body>
+<!-- <script src="/static/js/index.js" type="text/javascript"></script> -->
+
+</html>

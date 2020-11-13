@@ -1,0 +1,43 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {%block title %}
+        {%endblock%}
+    </title>
+
+
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <!-- 이부분에 공통된 css나 head에 들어가야할 내용을 작성해줍니다.  -->
+    {%block extrahead %}
+    <!-- 페이지별로 특정 css나 head에 들어가야하는 애를 작성해줍니다. -->
+    {%endblock%}
+</head>
+
+<body>
+    <nav>글로벌네브바!
+        <a href="{% url 'index' %}">
+            <span>Home</span>
+        </a>
+        <a href="{% url '2th' %}">
+            <span>nextpage</span>
+        </a>
+
+    </nav>
+    <!-- 모든페이지에 공통적으로 들어가야할 요소들 -->
+
+
+    {% block contents %}
+    <!-- 페이지별로 다르게 보일 content를 입력하는 block -->
+    {% endblock %}
+
+    <footer>
+        푸터자리입니다.
+    </footer>
+</body>
+
+</html>
